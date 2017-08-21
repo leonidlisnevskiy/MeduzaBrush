@@ -4,24 +4,20 @@ title: Index page
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	{# variable example #}
-	<h1>{{title}}</h1>
 
-	
-	{# partial example #}
-	{% include "partials/_header.html" %}
+{% include "partials/_header.html" %}
 
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
-
-
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
+<section class="order">
+	<div class="inner">
+		<h3>Форма Заказа</h3>
+		<form action="" novalidate="">
+			<input type="text" required="" placeholder="Ваше имя" class="name">
+			<input type="email" required="" placeholder="Ваш email">
+			<textarea name="" id="" cols="12" rows="5" placeholder="Комментарий"></textarea>
+			<button type="submit" class="btn btn-brown btn-ghost">заказать</button>
+		</form>
+	</div>
+</section>
+{% include "partials/_footer.html" %}
 
 {% endblock %}

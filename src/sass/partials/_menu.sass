@@ -1,0 +1,39 @@
+.menu
+	font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: middle
+		margin: 0 25px
+	&__link
+		text-decoration: none
+		text-transform: uppercase
+		color: $white
+		font-size: $text-xs //12.02px
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		padding-bottom: 19px
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			top: 100%
+			left: 50%
+			opacity: 0
+			transform: translateX(-50%)
+			-webkit-transform: translateX(-50%)
+			width: 0
+			height: 1px
+			transition: all .24s ease-in-out
+			background-color: rgba($coffee, .30)
+			-webkit-transition: all .24s ease-in-out
+		&.is-current:after
+			display: block
+			background-color: $coffee
+			opacity: 1
+			width: 100%
+		&:hover:after
+			opacity: 1
+			width: 100%
+	&.header_menu
+		float: left

@@ -2,7 +2,7 @@
   @return ($size/$context) * 1em
 
 @function img-url($image)
-  @return url('../img/#{$image}')
+  @return url('../img/#{$image}.png')
 
 =image($image)
   background-image: img-url($image)
@@ -31,3 +31,6 @@
 =xs
   +r(599)
     @content
+
+// import variables
+@import variables
