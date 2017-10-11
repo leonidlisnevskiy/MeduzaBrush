@@ -7,7 +7,7 @@ title: Index page
 
 {% include "partials/_header.html" %}
 
-<section class="order">
+<div class="order" id="order">
 	<div class="inner">
 		<h3>Форма Заказа</h3>
 		<form action="" novalidate="">
@@ -17,7 +17,35 @@ title: Index page
 			<button type="submit" class="btn btn-brown btn-ghost">заказать</button>
 		</form>
 	</div>
-</section>
+</div>
+<!-- END .order -->
+
+<div class="gallery" id="gallery">
+	<div class="js-slick slider">
+		<div class="item-slider item-lg">
+			<a href="#"><img src="img/brush-02.png" alt=""></a>
+		</div>
+
+		<div class="item-slider">
+			<a href="#"><img src="img/brush-03.png" alt=""></a>
+		</div>
+
+		<div class="item-slider">
+			<a href="#"><img src="img/brush-04.png" alt=""></a>
+		</div>
+
+		<div class="item-slider">
+			<a href="#"><img src="img/brush-05.png" alt=""></a>
+		</div>
+
+		<div class="item-slider">
+			<a href="#"><img src="img/brush-06.png" alt=""></a>
+		</div>
+	</div>
+</div>
+<!-- END .gallery -->
+
+
 {% include "partials/_footer.html" %}
 
 {% endblock %}
