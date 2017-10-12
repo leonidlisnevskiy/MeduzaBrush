@@ -1,7 +1,9 @@
 .header
 	+image(bg-header)
 	+cover
-	padding: 15px 0
+	padding-top: 15px
+	padding-bottom: 95px
+	font-size: 0
 	&__logo
 		float: left
 		.icon-logo-meduzabrush
@@ -10,12 +12,12 @@
 	&__nav
 		display: inline-block
 		vertical-align: top
-		margin-top: 20px
 		float: right
 		position: relative
 		+clr
-		+r(992)
-			margin-left: 0
+		+r(768)
+			float: none
+			width: 100%
 
 // Logo
 .logo
@@ -33,3 +35,9 @@
 	&-lang
 		float: right
 		margin-left: 75px
+		+r(1024)
+			margin-left: 25px
+		.menu__item
+			margin: 0 25px 0 0
+			&:last-child
+				margin: 0

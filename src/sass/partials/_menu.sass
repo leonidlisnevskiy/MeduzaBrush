@@ -4,15 +4,19 @@
 		display: inline-block
 		vertical-align: middle
 		margin: 0 25px
+		+r(992)
+			margin: 0 15px
 	&__link
 		text-decoration: none
 		text-transform: uppercase
 		color: $white
-		font-size: $text-xs //12.02px
+		font-size: 12px
 		position: relative
 		display: inline-block
 		vertical-align: middle
-		padding-bottom: 19px
+		padding: 19px 0
+		line-height: 1
+		+font-family($proxima-bld)
 		&:after
 			content: ""
 			display: block
@@ -36,4 +40,6 @@
 			opacity: 1
 			width: 100%
 	&.header_menu
-		float: left
+		margin-left: -25px
+		+r(992)
+			margin-left: -15px

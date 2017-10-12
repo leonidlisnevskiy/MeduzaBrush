@@ -6,24 +6,13 @@ title: Index page
 {% block content %}
 
 {% include "partials/_header.html" %}
-
-<div class="order" id="order">
-	<div class="inner">
-		<h3>Форма Заказа</h3>
-		<form action="" novalidate="">
-			<input type="text" required="" placeholder="Ваше имя" class="name">
-			<input type="email" required="" placeholder="Ваш email">
-			<textarea name="" id="" cols="12" rows="5" placeholder="Комментарий"></textarea>
-			<button type="submit" class="btn btn-brown btn-ghost">заказать</button>
-		</form>
-	</div>
-</div>
-<!-- END .order -->
-
 <div class="gallery" id="gallery">
 	<div class="js-slider slider">
 		<div class="item-slider item-lg">
-			<a href="#" style="background-image: url('../img/brush-02.png');"></a>
+			<a href="img/brush-02.png" data-fancybox="" style="background-image: url('../img/brush-02.png');">
+				<img src="img/brush-02.png" alt="">
+			</a>
+
 		</div>
 
 		<div class="item-slider item-md">
@@ -45,6 +34,28 @@ title: Index page
 </div>
 <!-- END .gallery -->
 
+
+<a href="https://c1.staticflickr.com/9/8148/29324593462_abebaddc38_k.jpg" data-fancybox="images">
+    <img src="https://c1.staticflickr.com/9/8148/29324593462_f890687b7a_m.jpg" />
+</a>
+
+<a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="images">
+    <img src="https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg" />
+</a>
+
+
+<div class="order" id="order">
+	<div class="inner">
+		<h3>Форма Заказа</h3>
+		<form action="" novalidate="">
+			<input type="text" required="" placeholder="Ваше имя" class="name">
+			<input type="email" required="" placeholder="Ваш email">
+			<textarea name="" id="" cols="12" rows="5" placeholder="Комментарий"></textarea>
+			<button type="submit" class="btn btn-brown btn-ghost">заказать</button>
+		</form>
+	</div>
+</div>
+<!-- END .order -->
 
 {% include "partials/_footer.html" %}
 

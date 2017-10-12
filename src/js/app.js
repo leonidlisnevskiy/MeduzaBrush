@@ -1,12 +1,11 @@
 import sayHello from './lib/sayHello.js';
+
+import fancybox from 'fancybox';
 import slick from 'slick-carousel';
 
-$(document).ready(function() {
-  sayHello();
+sayHello();
 
-  $(window).on('resize orientationchange', function() {
-    $('.js-slider').slick('resize');
-  });
+$(document).ready(function() {
 
   $('.js-slider').slick({
     slidesToShow: 5,
