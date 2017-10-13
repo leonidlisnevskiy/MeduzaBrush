@@ -1,14 +1,19 @@
 import $ from 'jquery';
-import slick from 'slick-carousel';
-import { fancybox } from '@fancyapps/fancybox';
-import formvalidator from 'jquery-form-validator';
+import {slick} from 'slick-carousel';
+import { scrollreveal } from 'scrollreveal';
+import {fancybox} from '@fancyapps/fancybox';
+import {formvalidator} from 'jquery-form-validator';
 
 export default (function() {
   const galleryItem = $('.js-fancybox');
   galleryItem.fancybox();
 })();
 
+
+
 $(document).ready(function() {
+
+
 
   $('#callForm').submit(function(e) {
     e.preventDefault();

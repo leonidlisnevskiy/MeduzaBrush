@@ -10,7 +10,13 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="lib/jquery.fancybox.min.css">
     <link rel="stylesheet" href="lib/theme-default.min.css">
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <script src="./lib/scrollreveal.min.js"></script>
+    <script>
+      window.sr = scrollreveal();
+
+    </script>
+  </head>
 
   <body>
     <!-- BEGIN content -->
@@ -42,12 +48,12 @@
       <!-- END .header -->
       <div class="gallery" id="gallery">
         <div class="js-slider slider">
-          <div class="item-slider item-lg"> <a class="js-fancybox" href="img/brush-02.png" data-fancybox="images" style="background-image: url('../img/brush-02.png');">
+          <div class="item-slider item-lg"> <a class="js-fancybox" href="img/brush-02.png" data-fancybox="images" style="background-image: url('./img/brush-02.png');">
 			</a> </div>
-          <div class="item-slider item-md"> <a class="js-fancybox" href="img/brush-03.png" data-fancybox="images" style="background-image: url('../img/brush-03.png');"></a> </div>
-          <div class="item-slider item-sm"> <a class="js-fancybox" href="img/brush-04.png" data-fancybox="images" style="background-image: url('../img/brush-04.png');"></a> </div>
-          <div class="item-slider item-sm"> <a class="js-fancybox" href="img/brush-05.png" data-fancybox="images" style="background-image: url('../img/brush-05.png');"></a> </div>
-          <div class="item-slider item-sm"> <a class="js-fancybox" href="img/brush-06.png" data-fancybox="images" style="background-image: url('../img/brush-06.png');"></a> </div>
+          <div class="item-slider item-md"> <a class="js-fancybox" href="img/brush-03.png" data-fancybox="images" style="background-image: url('./img/brush-03.png');"></a> </div>
+          <div class="item-slider item-sm"> <a class="js-fancybox" href="img/brush-04.png" data-fancybox="images" style="background-image: url('./img/brush-04.png');"></a> </div>
+          <div class="item-slider item-sm"> <a class="js-fancybox" href="img/brush-05.png" data-fancybox="images" style="background-image: url('./img/brush-05.png');"></a> </div>
+          <div class="item-slider item-sm"> <a class="js-fancybox" href="img/brush-06.png" data-fancybox="images" style="background-image: url('./img/brush-06.png');"></a> </div>
         </div>
       </div>
       <!-- END .gallery -->
@@ -60,6 +66,11 @@
         </div>
       </div>
       <!-- END .order -->
+      <div class="fooContainer">
+        <div class="fooReveal"> Foo </div>
+        <div class="fooReveal"> Foo </div>
+        <div class="fooReveal"> Foo </div>
+      </div>
       <footer class="footer" id="contacts">
         <div class="inner">
           <div class="inner__in">
@@ -86,6 +97,13 @@
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
+    <script>
+      sr.reveal('.fooReveal',
+      {
+        container: '.fooContainer'
+      });
+
+    </script>
   </body>
 
 </html>
