@@ -1,11 +1,35 @@
-import sayHello from './lib/sayHello.js';
-
-import fancybox from 'fancybox';
+import $ from 'jquery';
 import slick from 'slick-carousel';
+import { fancybox } from '@fancyapps/fancybox';
+import formvalidator from 'jquery-form-validator';
 
-sayHello();
+export default (function() {
+  const galleryItem = $('.js-fancybox');
+  galleryItem.fancybox();
+})();
 
 $(document).ready(function() {
+
+  $('#callForm').submit(function(e) {
+    e.preventDefault();
+    var formData = $(this).serialize();
+    $.ajax({
+      type: 'POST',
+      url: '../form-call.php',
+      dataType: 'json',
+      data: formData
+    }).done(function(data) {
+      console.log(data);
+      alert("It's OK!");
+    }).fail(function(data) {
+      console.log(data);
+    });
+    return true;
+  });
+
+  $.validate({
+    lang: 'ru'
+  });
 
   $('.js-slider').slick({
     slidesToShow: 5,

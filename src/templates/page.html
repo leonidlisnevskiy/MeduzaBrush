@@ -9,54 +9,45 @@ title: Index page
 <div class="gallery" id="gallery">
 	<div class="js-slider slider">
 		<div class="item-slider item-lg">
-			<a href="img/brush-02.png" data-fancybox="" style="background-image: url('../img/brush-02.png');">
-				<img src="img/brush-02.png" alt="">
+			<a class="js-fancybox" href="img/brush-02.png" data-fancybox="images" style="background-image: url('../img/brush-02.png');">
 			</a>
-
 		</div>
 
 		<div class="item-slider item-md">
-			<a href="#" style="background-image: url('../img/brush-03.png');"></a>
+			<a class="js-fancybox" href="img/brush-03.png" data-fancybox="images" style="background-image: url('../img/brush-03.png');"></a>
 		</div>
 
 		<div class="item-slider item-sm">
-			<a href="#" style="background-image: url('../img/brush-04.png');"></a>
+			<a class="js-fancybox" href="img/brush-04.png" data-fancybox="images" style="background-image: url('../img/brush-04.png');"></a>
 		</div>
 
 		<div class="item-slider item-sm">
-			<a href="#" style="background-image: url('../img/brush-05.png');"></a>
+			<a class="js-fancybox" href="img/brush-05.png" data-fancybox="images" style="background-image: url('../img/brush-05.png');"></a>
 		</div>
 
 		<div class="item-slider item-sm">
-			<a href="#" style="background-image: url('../img/brush-06.png');"></a>
+			<a class="js-fancybox" href="img/brush-06.png" data-fancybox="images" style="background-image: url('../img/brush-06.png');"></a>
 		</div>
 	</div>
 </div>
 <!-- END .gallery -->
 
-
-<a href="https://c1.staticflickr.com/9/8148/29324593462_abebaddc38_k.jpg" data-fancybox="images">
-    <img src="https://c1.staticflickr.com/9/8148/29324593462_f890687b7a_m.jpg" />
-</a>
-
-<a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="images">
-    <img src="https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg" />
-</a>
-
-
 <div class="order" id="order">
 	<div class="inner">
 		<h3>Форма Заказа</h3>
-		<form action="" novalidate="">
-			<input type="text" required="" placeholder="Ваше имя" class="name">
-			<input type="email" required="" placeholder="Ваш email">
-			<textarea name="" id="" cols="12" rows="5" placeholder="Комментарий"></textarea>
+
+		<form method="ajax" id="callForm" autocomplete="true">
+			<input type="text" required="" placeholder="Ваше имя" class="name" name="call-name" autocomplete="true">
+			<input type="email" required="" placeholder="Ваш email" data-validation="email" name="call-email" autocomplete="true">
+			<textarea name="" id="" cols="12" rows="5" placeholder="Комментарий" name="commentary"></textarea>
 			<button type="submit" class="btn btn-brown btn-ghost">заказать</button>
 		</form>
+		<!-- END -->
 	</div>
 </div>
 <!-- END .order -->
 
 {% include "partials/_footer.html" %}
-
 {% endblock %}
+
+

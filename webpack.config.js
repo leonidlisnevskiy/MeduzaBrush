@@ -6,7 +6,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 function createConfig(env) {
   let isProduction,
-    webpackConfig;
+  webpackConfig;
 
   if (env === undefined) {
     env = process.env.NODE_ENV;
@@ -26,8 +26,8 @@ function createConfig(env) {
       publicPath: 'js/',
     },
     devtool: isProduction ?
-      '#source-map' :
-      '#cheap-module-eval-source-map',
+    '#source-map' :
+    '#cheap-module-eval-source-map',
     plugins: [
       // new webpack.optimize.CommonsChunkPlugin({
       //     name: 'vendor',
@@ -42,10 +42,13 @@ function createConfig(env) {
         }
       }),
       new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-      }),
+       $: 'jquery',
+       '$': 'jquery',
+       jquery: 'jquery',
+       jQuery: 'jquery',
+       'window.jquery': 'jquery',
+       'window.jQuery': 'jquery',
+     }),
       new webpack.NoEmitOnErrorsPlugin(),
 
       new BundleAnalyzerPlugin({
@@ -53,26 +56,26 @@ function createConfig(env) {
         analyzerPort: 4000,
         openAnalyzer: false,
       }),
-    ],
-    resolve: {
-      extensions: ['.js'],
-      alias: {
-        TweenLite: path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
-        TweenMax: path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
-        TimelineLite: path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
-        TimelineMax: path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
-        ScrollMagic: path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-        'animation.gsap': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
-        'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
+      ],
+      resolve: {
+        extensions: ['.js'],
+        alias: {
+          TweenLite: path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
+          TweenMax: path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
+          TimelineLite: path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
+          TimelineMax: path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
+          ScrollMagic: path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
+          'animation.gsap': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
+          'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
+        },
       },
-    },
-    module: {
-      rules: [
+      module: {
+        rules: [
         {
           enforce: 'pre',
           test: /\.js$/,
           exclude: [
-            path.resolve(__dirname, 'node_modules'),
+          path.resolve(__dirname, 'node_modules'),
           ],
           loader: 'eslint-loader',
           options: {
@@ -84,27 +87,27 @@ function createConfig(env) {
           test: /\.js$/,
           loader: 'babel-loader',
           exclude: [
-            path.resolve(__dirname, 'node_modules'),
+          path.resolve(__dirname, 'node_modules'),
           ],
         }],
-    },
-  };
+      },
+    };
 
-  if (isProduction) {
-    webpackConfig.plugins.push(
-      new webpack.LoaderOptionsPlugin({
-        minimize: true,
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false,
-        },
-      })
-    );
+    if (isProduction) {
+      webpackConfig.plugins.push(
+        new webpack.LoaderOptionsPlugin({
+          minimize: true,
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            warnings: false,
+          },
+        })
+        );
+    }
+
+    return webpackConfig;
   }
 
-  return webpackConfig;
-}
-
-module.exports = createConfig();
-module.exports.createConfig = createConfig;
+  module.exports = createConfig();
+  module.exports.createConfig = createConfig;
