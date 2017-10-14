@@ -2,12 +2,21 @@ body
 	background: #FFF
 	// +css-lock(16, 50, 600, 1000)
 	line-height: 1.4
+	height: 100%
+html
+	height: 100%
 
 .slider
 	+clr
 	font-size: 0
 	position: relative
-
+.js-reveal
+	opacity: 1
+	+r(680)
+		transform: translate3d(0, 0, 0) !important
+	&.active
+		opacity: 0
+		background-color: red
 .item
 	&-slider
 		overflow: hidden
@@ -20,7 +29,7 @@ body
 		a
 			+cover
 			text-decoration: none
-			transition: all .24s ease-in-out
+			transition: transform .42s ease-in-out
 			cursor: pointer
 			display: block
 		// item sizes

@@ -1,0 +1,86 @@
+input.error,
+input.valid,
+select.error,
+select.valid
+	background-position: right 24px center
+
+textarea
+	width: 100%
+	resize: none
+	font-size: $text-reg //16px
+	+font-family($gotham-reg)
+	border: 1px solid $white
+	+placeholder-color($white)
+	box-shadow: inset 0 0 30px 5px rgba(62, 53, 42, .11)
+	background-color: $coffee
+	padding: 24px 24px 24px 38px
+	letter-spacing: 0.200rem
+	text-transform: uppercase
+	transition: border-color .32s ease, box-shadow .42s ease
+
+.textarea-field
+	textarea
+		&:focus
+			box-shadow: none
+	position: relative
+	&:hover
+		&:before, &:after
+			background-color: darken($white, 10)
+		textarea
+			border-color: rgba($white, .30)
+	&:before,
+	&:after
+		content: ""
+		background-color: rgba($white, .30)
+		display: block
+		position: absolute
+		transition: background-color .32s ease
+	&:before
+		bottom: -8px
+		left: 0
+		width: calc(100% + 8px)
+		height: 1px
+	&:after
+		right: -8px
+		height: calc(100% + 8px)
+		width: 1px
+		top: -1px
+
+// Input
+input
+	display: inline-block
+	vertical-align: top
+	margin: 0
+	font-size: $text-reg //16px
+	width: 100%
+	padding: 0
+	+placeholder-color($white)
+	background-color: $coffee
+	box-shadow: inset 0 0 30px 5px rgba(62, 53, 42, .11)
+	border: 1px solid $white
+	letter-spacing: 0.200rem
+	text-transform: uppercase
+	+font-family($gotham-reg)
+	padding: 24px 24px 24px 38px
+	transition: box-shadow .42s ease
+	&:focus
+		box-shadow: none
+
+
+.input
+	&-field
+		display: inline-block
+		vertical-align: top
+		width: 100%
+
+.has-error
+	position: relative
+	.form-error
+		font-size: $text-xs //12
+		margin: 0
+		text-align: left
+		position: absolute
+		top: -12px
+		left: 0
+		line-height: 1
+		+font-family($gotham-reg)

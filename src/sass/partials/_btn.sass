@@ -1,24 +1,46 @@
 .btn
-	&-ghost
-		border-color: inherit
-		background-color: transparent
+	cursor: pointer
+	max-width: 261px
+	padding: 0
+	width: 100%
+	display: inline-block
+	vertical-align: top
+	background-color: transparent
+	text-transform: uppercase
+	letter-spacing: 0.200rem
+	height: 68px
+	outline: none
+	&:focus,
+	&:hover
+		outline: none
+	&-dark
+		color: $main
+		+font-family($gotham-reg)
 		position: relative
-		&:after, &:before
+		transition: border-color .32s ease
+		border: 1px solid $main
+		&:hover
+			border-color: rgba($main, .30)
+			color: darken($main, 10)
+			&:before, &:after
+				background-color: darken($main, 10)
+		&:before,
+		&:after
 			content: ""
+			background-color: rgba($main, .30)
 			display: block
 			position: absolute
-			background-color: transparent
-		&:after
-			right: 0
-			top: 0
-			width: 1px
-			height: 100%
-			background-color: $brown
+			transition: background-color .32s ease
 		&:before
-			background-color: $brown
-			width: 100%
+			bottom: -8px
 			left: 0
-			top: 100%
+			width: calc(100% + 8px)
+			height: 1px
+		&:after
+			right: -8px
+			height: calc(100% + 8px)
+			width: 1px
+			top: -1px
 	&-brown
 	&-nav
 		display: none

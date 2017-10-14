@@ -11,11 +11,16 @@
     <link rel="stylesheet" href="lib/jquery.fancybox.min.css">
     <link rel="stylesheet" href="lib/theme-default.min.css">
     <link rel="stylesheet" media="all" href="css/app.css">
-    <script src="./lib/scrollreveal.min.js"></script>
-    <script>
-      window.sr = scrollreveal();
+    <style>
+      .sr .js-reveal {
+        visibility: hidden;
+      }
 
-    </script>
+      .js-reveal-container {
+        perspective: 800px;
+      }
+
+    </style>
   </head>
 
   <body>
@@ -46,31 +51,53 @@
         </div>
       </header>
       <!-- END .header -->
+      <div class="features" id="features">
+        <div class="inner">
+          <div class="inner__in">
+            <h3>Lorem ipsum dolor.</h3>
+          </div>
+        </div>
+      </div>
       <div class="gallery" id="gallery">
-        <div class="js-slider slider">
-          <div class="item-slider item-lg"> <a class="js-fancybox" href="img/brush-02.png" data-fancybox="images" style="background-image: url('./img/brush-02.png');">
-			</a> </div>
-          <div class="item-slider item-md"> <a class="js-fancybox" href="img/brush-03.png" data-fancybox="images" style="background-image: url('./img/brush-03.png');"></a> </div>
-          <div class="item-slider item-sm"> <a class="js-fancybox" href="img/brush-04.png" data-fancybox="images" style="background-image: url('./img/brush-04.png');"></a> </div>
-          <div class="item-slider item-sm"> <a class="js-fancybox" href="img/brush-05.png" data-fancybox="images" style="background-image: url('./img/brush-05.png');"></a> </div>
-          <div class="item-slider item-sm"> <a class="js-fancybox" href="img/brush-06.png" data-fancybox="images" style="background-image: url('./img/brush-06.png');"></a> </div>
+        <div class="js-slider slider js-reveal-container">
+          <div class="item-slider item-lg">
+            <div class="js-reveal js-reveal-00"> <a class="js-fancybox" href="img/brush-02.png" data-fancybox="images" style="background-image: url('./img/brush-02.png');">
+				</a> </div>
+          </div>
+          <div class="item-slider item-md">
+            <div class="js-reveal js-reveal-01"> <a class="js-fancybox" href="img/brush-03.png" data-fancybox="images" style="background-image: url('./img/brush-03.png');"></a> </div>
+          </div>
+          <div class="item-slider item-sm">
+            <div class="js-reveal js-reveal-02"> <a class="js-fancybox" href="img/brush-04.png" data-fancybox="images" style="background-image: url('./img/brush-04.png');"></a> </div>
+          </div>
+          <div class="item-slider item-sm">
+            <div class="js-reveal js-reveal-03"> <a class="js-fancybox" href="img/brush-05.png" data-fancybox="images" style="background-image: url('./img/brush-05.png');"></a> </div>
+          </div>
+          <div class="item-slider item-sm">
+            <div class="js-reveal js-reveal-04"> <a class="js-fancybox" href="img/brush-06.png" data-fancybox="images" style="background-image: url('./img/brush-06.png');"></a> </div>
+          </div>
         </div>
       </div>
       <!-- END .gallery -->
       <div class="order" id="order">
         <div class="inner">
           <h3>Форма Заказа</h3>
-          <form method="ajax" id="callForm" autocomplete="true"> <input type="text" required="" placeholder="Ваше имя" class="name" name="call-name" autocomplete="true"> <input type="email" required="" placeholder="Ваш email" data-validation="email" name="call-email" autocomplete="true"> <textarea name=""
-              id="" cols="12" rows="5" placeholder="Комментарий" name="commentary"></textarea> <button type="submit" class="btn btn-brown btn-ghost">заказать</button> </form>
+          <form>
+            <div class="grid grid-double-spacing">
+              <div class="grid-2-col">
+                <div class="grid__item">
+                  <div class="input-field"> <input type="text" placeholder="Ваше имя" class="name" required=""> </div>
+                </div>
+                <div class="grid__item">
+                  <div class="input-field"> <input type="email" placeholder="Ваш email" data-validation="email" required=""> </div>
+                </div>
+              </div>
+            </div>
+            <div class="textarea-field"> <textarea cols="12" rows="5" placeholder="Комментарий"></textarea> </div> <button type="submit" class="btn btn-dark">заказать</button> </form>
           <!-- END -->
         </div>
       </div>
       <!-- END .order -->
-      <div class="fooContainer">
-        <div class="fooReveal"> Foo </div>
-        <div class="fooReveal"> Foo </div>
-        <div class="fooReveal"> Foo </div>
-      </div>
       <footer class="footer" id="contacts">
         <div class="inner">
           <div class="inner__in">
@@ -97,13 +124,6 @@
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
-    <script>
-      sr.reveal('.fooReveal',
-      {
-        container: '.fooContainer'
-      });
-
-    </script>
   </body>
 
 </html>

@@ -13,10 +13,11 @@
   <link rel="stylesheet" media="all" href="css/app.css">
 
   {# {% include "../partials/_media-tags.html" %} #}
-<script src="./lib/scrollreveal.min.js"></script>
-  <script>
-    window.sr = scrollreveal();
-  </script>
+
+  <style>
+  .sr .js-reveal { visibility: hidden; }
+  .js-reveal-container { perspective: 800px; }
+</style>
 </head>
 <body>
 
@@ -29,8 +30,5 @@
   <!-- BEGIN scripts -->
   <script type="text/javascript" src="js/app.js"></script>
   <!-- END scripts -->
-  <script>
-    sr.reveal('.fooReveal', { container: '.fooContainer' });
-  </script>
 </body>
 </html>
