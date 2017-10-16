@@ -1,0 +1,28 @@
+// list
+.list
+	&-lang
+		float: right
+		margin-left: 75px
+		+r(1024)
+			margin-left: 25px
+		.menu__item
+			margin: 0 25px 0 0
+			&:last-child
+				margin: 0
+	&-features
+		li
+			display: block
+			margin-bottom: 50px
+		li i
+			display: block
+			margin: 0 0 35px
+		li h3
+			color: #182637
+			font-size: 26px
+			+font-family($gotham-reg)
+			letter-spacing: 0.050rem
+		li p
+			+font-family($gotham-light)
+			color: $gray-darker
+			font-size: $text-sm //14px
+			line-height: 2.13

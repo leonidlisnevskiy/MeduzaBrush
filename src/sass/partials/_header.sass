@@ -1,9 +1,11 @@
 .header
-	+image(bg-header)
-	+cover
-	padding-top: 15px
-	padding-bottom: 95px
-	font-size: 0
+	background-image: url("../img/bg-header.jpg")
+	overflow: hidden
+	background-repeat: no-repeat
+	&__panel
+		font-size: 0
+		padding-top: 15px
+		+clr
 	&__logo
 		float: left
 		.icon-logo-meduzabrush
@@ -18,26 +20,68 @@
 		+r(768)
 			float: none
 			width: 100%
-
-// Logo
-.logo
-	text-decoration: none
-	width: 130px
-	height: 50px
+	&__preview
+		display: inline-block
+		margin-top: 95px
+		width: 100%
+		position: relative
+		margin-bottom: 280px
+		vertical-align: top
+.lorem2
 	display: inline-block
 	vertical-align: top
-	svg
-		width: 100%
-		height: 100%
-
-// list
-.list
-	&-lang
-		float: right
-		margin-left: 75px
-		+r(1024)
-			margin-left: 25px
-		.menu__item
-			margin: 0 25px 0 0
-			&:last-child
-				margin: 0
+	position: absolute
+	top: 0
+	right: -350px
+	padding-bottom: 82.50%
+	+cover
+	width: 100%
+	max-width: 866px
+	+r(1220)
+		max-width: 670px
+		padding-bottom: 68.42%
+		right: -250px
+	+r(992)
+		padding-bottom: 75%
+		max-width: 470px
+		right: -170px
+	img
+		height: auto
+		max-width: 100%
+.lorem
+	float: left
+	max-width: 600px
+	margin-left: 75px
+	+r(992)
+		margin-left: 0
+	h2.title-lead
+		margin: 75px auto
+		font-size: 48px
+		+font-family($gotham-reg)
+		color: $white
+		line-height: 1.25
+		font-weight: normal
+		font-style: normal
+		text-transform: uppercase
+		letter-spacing: 0.050rem
+		+r(992)
+			font-size: 43px
+			margin: 35px auto
+	.title-shaped
+		margin-left: 65px
+	.desc
+		padding-left: 100px
+		+r(992)
+			padding-left: 55px
+		p
+			color: $gray
+			+font-family($gotham-light)
+			font-size: $text-sm //14px
+			line-height: 1.87
+			strong
+				text-transform: uppercase
+				+font-family($gotham-md)
+		button
+			margin-top: 86px
+			+r(768)
+				margin-top: 45px

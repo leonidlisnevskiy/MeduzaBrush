@@ -47,3 +47,34 @@
 			margin: 0 auto 30px
 
 
+// features
+.features
+	background-image: url("../img/bg-features.png")
+	background-color: $white
+	+cover
+	.image-left
+		overflow: hidden
+		height: 890px
+		margin-left: 40px
+		img
+			max-width: 100%
+			height: auto
+	&__right
+		float: right
+		margin-right: -20px
+		font-size: 0
+		display: table
+		max-width: 670px
+		position: relative
+		.list-features
+			width: 50%
+			padding: 0 20px
+			max-width: 320px
+			display: inline-block
+			vertical-align: top
+		.title-shaped
+			top: 0
+			right: 0
+.image
+	&-left
+		float: left

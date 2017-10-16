@@ -8,29 +8,15 @@
 	background-color: transparent
 	text-transform: uppercase
 	letter-spacing: 0.200rem
+	+font-family($gotham-reg)
 	height: 68px
 	outline: none
 	&:focus,
 	&:hover
 		outline: none
-	&-dark
-		color: $main
-		+font-family($gotham-reg)
+	&-ghost
+		transition: border-color .32s ease, background-color .34s ease-in-out
 		position: relative
-		transition: border-color .32s ease
-		border: 1px solid $main
-		&:hover
-			border-color: rgba($main, .30)
-			color: darken($main, 10)
-			&:before, &:after
-				background-color: darken($main, 10)
-		&:before,
-		&:after
-			content: ""
-			background-color: rgba($main, .30)
-			display: block
-			position: absolute
-			transition: background-color .32s ease
 		&:before
 			bottom: -8px
 			left: 0
@@ -41,7 +27,34 @@
 			height: calc(100% + 8px)
 			width: 1px
 			top: -1px
+		&:before,
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			transition: background-color .32s ease
+	&-dark
+		color: $main
+		border: 1px solid $main
+		&:before,
+		&:after
+			background-color: rgba($main, .30)
+		&:hover
+			border-color: rgba($main, .30)
+			background-color: rgba($main, .30)
+			&:before, &:after
+				background-color: darken($main, 10)
 	&-brown
+		color: $coffee
+		border: 1px solid $coffee
+		&:before,
+		&:after
+			background-color: rgba($coffee, .30)
+		&:hover
+			border-color: rgba($coffee, .30)
+			background-color: rgba($coffee, .30)
+			&:before, &:after
+				background-color: darken($coffee, 10)
 	&-nav
 		display: none
 		position: absolute
