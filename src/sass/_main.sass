@@ -14,7 +14,6 @@
 		font-size: $text-lg //36px
 		+font-family($gotham-reg)
 		+r(768)
-			font-size: 28px
 			margin-bottom: 30px
 	form
 		max-width: 770px
@@ -50,12 +49,18 @@
 // features
 .features
 	background-image: url("../img/bg-features.png")
-	background-color: $white
 	+cover
+	position: relative
+	+r(992)
+		background-position: left center
 	.image-left
 		overflow: hidden
 		height: 890px
 		margin-left: 40px
+		+r(1024)
+			margin-left: 20px
+		+r(992)
+			display: none
 		img
 			max-width: 100%
 			height: auto
@@ -66,15 +71,133 @@
 		display: table
 		max-width: 670px
 		position: relative
+		+r(992)
+			max-width: 100%
+			width: 100%
+			display: inline-block
+			vertical-align: top
+			float: none
 		.list-features
 			width: 50%
 			padding: 0 20px
 			max-width: 320px
 			display: inline-block
 			vertical-align: top
+			+r(992)
+				max-width: 100%
 		.title-shaped
 			top: 0
 			right: 0
 .image
 	&-left
 		float: left
+
+
+// lorem
+.loremin
+	position: absolute
+	display: inline-block
+	width: 840px
+	top: 10px
+	right: -250px
+	vertical-align: top
+	+r(1166)
+		width: 680px
+		top: 70px
+		right: -250px
+	+r(992)
+		top: 108px
+		position: relative
+		right: 0
+		left: 0
+		width: 100%
+		height: 815px
+	+r(768)
+		height: 605px
+.lorem2
+	width: 100%
+	padding-bottom: 100%
+	z-index: 1
+	background-size: cover
+	background-repeat: no-repeat
+	+r(1166)
+		width: 70%
+	+r(992)
+		width: 100%
+		padding-bottom: 0
+		height: 100%
+.lorem
+	overflow: hidden
+	+clr
+	background-image: url("../img/bg-dark.png")
+	+cover
+	padding: 110px 0 105px 0
+	.inner
+		+r(768)
+			padding: 0 30px
+		&__in
+			position: relative
+			+r(768)
+				padding: 0 30px
+	&__desc
+		float: left
+		padding-left: 45px
+		max-width: 675px
+		+r(768)
+			padding-left: 0
+			float: none
+			max-width: 100%
+		.title-shaped
+			margin-left: 61px
+		h3
+			font-size: 60px
+			letter-spacing: 0.020rem
+			color: $white
+			line-height: 1
+			+font-family($gotham-reg)
+			margin: 58px auto 41px
+			text-transform: uppercase
+		p.price
+			+font-family($gotham-reg)
+			font-size: 119.7px
+			color: $brown2
+			line-height: 1
+			letter-spacing: -0.050rem
+			strong
+				+font-family($gotham-md)
+				display: inline-block
+				font-size: 80px
+	&__about
+		margin-top: 85px
+		.btn-group
+			margin-top: 70px
+			.btn
+				+r(992)
+					max-width: 231px
+		p
+			+font-family($gotham-light)
+			font-size: 14px
+			line-height: 2.13
+			color: $gray
+		.title-icon
+			font-size: 14px
+			color: $gray
+			text-transform: uppercase
+			position: relative
+			padding-bottom: 29px
+			+font-family($gotham-light)
+			margin-left: 50px
+			margin-bottom: 30px
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				left: 0
+				top: 100%
+				background-color: rgba($coffee, 0.45)
+				height: 1px
+				width: 60px
+			i
+				position: absolute
+				top: -12px
+				left: -50px

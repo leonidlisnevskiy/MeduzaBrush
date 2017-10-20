@@ -1,8 +1,10 @@
 body
 	background: #FFF
-	// +css-lock(16, 50, 600, 1000)
+	// +css-lock(14, 50, 600, 1000)
 	line-height: 1.4
+	+font-family($gotham-reg)
 	height: 100%
+	font-size: $text-sm //14px
 html
 	height: 100%
 
@@ -11,6 +13,33 @@ html
 	font-size: 0
 	position: relative
 
+// Typography
+h1, h2, h3, h4, h5, h6, p, strong, em
+	font-weight: normal
+	font-style: normal
+
+// Head-picture
+.head-pic
+	display: inline-block
+	vertical-align: top
+	position: absolute
+	top: 0
+	right: -350px
+	padding-bottom: 82.50%
+	+cover
+	width: 100%
+	max-width: 866px
+	+r(1220)
+		max-width: 670px
+		padding-bottom: 68.42%
+		right: -250px
+	+r(992)
+		padding-bottom: 75%
+		max-width: 470px
+		right: -170px
+	img
+		height: auto
+		max-width: 100%
 // Logo
 .logo
 	text-decoration: none

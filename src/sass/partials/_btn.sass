@@ -11,6 +11,10 @@
 	+font-family($gotham-reg)
 	height: 68px
 	outline: none
+	text-decoration: none
+	text-align: center
+	line-height: 68px
+	z-index: 5
 	&:focus,
 	&:hover
 		outline: none
@@ -96,3 +100,6 @@
 				top: 26px
 		+r(768)
 			display: block
+	&-group
+		.btn:last-child
+			margin-left: 30px

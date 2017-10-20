@@ -6,6 +6,7 @@ title: Index page
 {% block content %}
 
 {% include "partials/_header.html" %}
+
 <div class="features" id="features">
 	<div class="inner">
 		<div class="inner__in">
@@ -52,42 +53,68 @@ title: Index page
 		</div>
 	</div>
 </div>
+<!-- END .features -->
 
 <div class="gallery" id="gallery">
 	<div class="js-slider slider js-reveal-container">
 		<div class="item-slider item-lg">
 			<div class="js-reveal js-reveal-00">
-				<a class="js-fancybox" href="img/brush-02.png" data-fancybox="images" style="background-image: url('./img/brush-02.png');">
+				<a class="js-fancybox" href="img/brush-02.jpg" data-fancybox="images" style="background-image: url('./img/brush-02.jpg');">
 				</a>
 			</div>
 		</div>
 
 		<div class="item-slider item-md">
 			<div class="js-reveal js-reveal-01">
-				<a class="js-fancybox" href="img/brush-03.png" data-fancybox="images" style="background-image: url('./img/brush-03.png');"></a>
+				<a class="js-fancybox" href="img/brush-03.jpg" data-fancybox="images" style="background-image: url('./img/brush-03.jpg');"></a>
 			</div>
 		</div>
 
 		<div class="item-slider item-sm">
 			<div class="js-reveal js-reveal-02">
-				<a class="js-fancybox" href="img/brush-04.png" data-fancybox="images" style="background-image: url('./img/brush-04.png');"></a>
+				<a class="js-fancybox" href="img/brush-04.jpg" data-fancybox="images" style="background-image: url('./img/brush-04.jpg');"></a>
 			</div>
 		</div>
 
 		<div class="item-slider item-sm">
 			<div class="js-reveal js-reveal-03">
-				<a class="js-fancybox" href="img/brush-05.png" data-fancybox="images" style="background-image: url('./img/brush-05.png');"></a>
+				<a class="js-fancybox" href="img/brush-05.jpg" data-fancybox="images" style="background-image: url('./img/brush-05.jpg');"></a>
 			</div>
 		</div>
 
 		<div class="item-slider item-sm">
 			<div class="js-reveal js-reveal-04">
-				<a class="js-fancybox" href="img/brush-06.png" data-fancybox="images" style="background-image: url('./img/brush-06.png');"></a>
+				<a class="js-fancybox" href="img/brush-06.jpg" data-fancybox="images" style="background-image: url('./img/brush-06.jpg');"></a>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- END .gallery -->
+
+<div class="lorem">
+	<div class="inner">
+		<div class="inner__in">
+			<div class="lorem__desc">
+				<h2 class="title-shaped">Заказать</h2>
+				<h3>Цена <br>Medusa Brush</h3>
+				<p class="price">669 <strong>UAH</strong></p>
+				<div class="lorem__about">
+					<div class="title-icon"><i class="icon-novaposhta"></i>Доставка Новой Почтой по Украине</div>
+					<p><strong>Medusa Brush</strong> — эксклюзивный и инновационный продукт. Заказывай оригинальную щетку на этом сайте, а также в сети магазинов <strong>SIMMETRIA</strong>. И всегда будь неотразимой, ведь каждый день — твой самый важный день в жизни!</p>
+					<div class="btn-group">
+						<a href="#order" class="js-scroll-to btn btn-brown btn-ghost">ЗАКАЗАТЬ</a>
+						<a href="#" class="btn btn-brown btn-ghost">сайт simmetria</a>
+					</div>
+				</div>
+			</div>
+			<!-- END .lorem__desc -->
+			<div class="loremin">
+				<div class="lorem2" style="background-image: url('../img/brush-double.png');"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END .lorem -->
 
 <div class="order" id="order">
 	<div class="inner">
@@ -98,20 +125,20 @@ title: Index page
 				<div class="grid-2-col">
 					<div class="grid__item">
 						<div class="input-field">
-							<input type="text" placeholder="Ваше имя" class="name" required="">
+							<input type="text" placeholder="Ваше имя" class="name input" required="">
 						</div>
 					</div>
 
 					<div class="grid__item">
 						<div class="input-field">
-							<input type="email" placeholder="Ваш email" data-validation="email" required="">
+							<input type="email" placeholder="Ваш email" class="input" data-validation="email" required="">
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="textarea-field">
-				<textarea cols="12" rows="5" placeholder="Комментарий"></textarea>
+				<textarea class="textarea" cols="12" rows="5" placeholder="Комментарий"></textarea>
 			</div>
 			<button type="submit" class="btn btn-ghost  btn-dark">заказать</button>
 		</form>

@@ -47,7 +47,7 @@ $(document).ready(function() {
 
   sr.reveal('.js-reveal-03', {
     origin: 'bottom',
-    rotate: { x: 0, y: 0, z: 0 }
+    rotate: { x: 0, y: 20, z: 0 }
   });
 
   sr.reveal('.js-reveal-04', {
@@ -71,7 +71,7 @@ $(document).ready(function() {
         settings: 'unslick'
       },
       {
-        breakpoint: 640,
+        breakpoint: 657,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

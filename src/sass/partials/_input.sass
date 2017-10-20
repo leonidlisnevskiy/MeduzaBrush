@@ -5,7 +5,8 @@ select.valid
 	background-position: right 24px center
 input.error
 	border-color: $red !important
-textarea
+
+.textarea
 	width: 100%
 	resize: none
 	font-size: $text-reg //16px
@@ -20,14 +21,14 @@ textarea
 	transition: border-color .32s ease, box-shadow .42s ease
 
 .textarea-field
-	textarea
+	.textarea
 		&:focus
 			box-shadow: none
 	position: relative
 	&:hover
 		&:before, &:after
 			background-color: darken($white, 10)
-		textarea
+		.textarea
 			border-color: rgba($white, .30)
 	&:before,
 	&:after
@@ -48,7 +49,7 @@ textarea
 		top: -1px
 
 // Input
-input
+.input
 	display: inline-block
 	vertical-align: top
 	margin: 0
@@ -83,7 +84,7 @@ input
 		margin: 0
 		text-align: left
 		position: absolute
-		top: -16px
+		bottom: 105%
 		left: 0
 		color: $red
 		line-height: 1
