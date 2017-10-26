@@ -1,3 +1,96 @@
+.preview
+	position: relative
+	// margin-top: -91px
+	padding-top: 155px
+	padding-bottom: 302px
+	color: $white
+	+cover
+	+clr
+	+md
+		overflow: hidden
+		padding-bottom: 0
+	&__in
+		max-width: 1170px
+		+clr
+	&__image
+		position: absolute
+		top: -8px
+		left: -532px
+		width: 930px
+		+md
+			top: 18px
+			left: 50%
+			margin-left: -378px
+		&-wrapper
+			position: relative
+			float: right
+			z-index: 1
+			pointer-events: none
+			+md
+				float: none
+				height: 495px
+		&-wrapper img
+			max-width: 100%
+			display: block
+	&__desc
+		float: left
+		max-width: 670px
+		z-index: 3
+		position: relative
+		padding-left: 78px
+		+md
+			padding-left: 0
+			float: none
+		.title-lead
+			margin-top: 71px
+		.title-shaped
+			margin-left: 65px
+	&__text
+		padding-left: 100px
+		+md
+			padding-left: 58px
+			margin-top: 25px
+			text-align: center
+		p
+			color: $gray
+			+font-family($gotham-light)
+			font-size: 14px
+			line-height: 2.14286
+			text-align: left
+			strong
+				text-transform: uppercase
+				+font-family($gotham-md)
+		.btn
+			margin-top: 45px
+			max-width: 228px
+			height: 68px
+			font-size: $text-reg //16px
+			line-height: 68px
+			+r(768)
+				margin-top: 45px
+	.copyright
+		+font-family($gotham-light)
+		color: $gray
+		position: absolute
+		left: 38px
+		bottom: 0
+		padding-top: 350px
+		opacity: 0.4
+		letter-spacing: 0.2em
+		writing-mode: vertical-lr
+		transform: rotate(180deg)
+		+r(1199)
+			left: 3px
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			top: 0
+			transform: translate3d(0px,9px,0px) rotateZ(0deg)
+			right: 100%
+			width: 340px
+			height: 1px
+			background-color: rgba($gray, .40)
 .order
 	padding: 100px 0 95px 0
 	+image(bg-order)
@@ -8,7 +101,7 @@
 	+r(667)
 		padding: 40px 0
 	h3
-		margin-bottom: 70px
+		margin-bottom: 50px
 		text-transform: uppercase
 		color: $main
 		font-size: $text-lg //36px
@@ -41,7 +134,7 @@
 				+r(568)
 					margin-right: 0
 	.textarea-field
-		margin: 15px auto 57px
+		margin: 15px auto 70px
 		+r(860)
 			margin: 0 auto 30px
 
@@ -55,7 +148,7 @@
 		background-position: left center
 	.image-left
 		overflow: hidden
-		height: 890px
+		height: 880px
 		margin-left: 40px
 		+r(1024)
 			margin-left: 20px
@@ -66,11 +159,11 @@
 			height: auto
 	&__right
 		float: right
-		margin-right: -20px
 		font-size: 0
 		display: table
 		max-width: 670px
 		position: relative
+		top: -77px
 		+r(992)
 			max-width: 100%
 			width: 100%
@@ -79,59 +172,52 @@
 			float: none
 		.list-features
 			width: 50%
-			padding: 0 20px
-			max-width: 320px
+			max-width: 340px
 			display: inline-block
 			vertical-align: top
+			&.offset-top
+				margin-top: 115px
 			+r(992)
 				max-width: 100%
 		.title-shaped
 			top: 0
-			right: 0
+			right: 40px
+			position: absolute
 .image
 	&-left
 		float: left
 
 
-// lorem
-.loremin
-	position: absolute
-	display: inline-block
-	width: 840px
-	top: 10px
-	right: -250px
-	vertical-align: top
-	+r(1166)
-		width: 680px
-		top: 70px
-		right: -250px
-	+r(992)
-		top: 108px
-		position: relative
-		right: 0
-		left: 0
-		width: 100%
-		height: 815px
-	+r(768)
-		height: 605px
-.lorem2
-	width: 100%
-	padding-bottom: 100%
-	z-index: 1
-	background-size: cover
-	background-repeat: no-repeat
-	+r(1166)
-		width: 70%
-	+r(992)
-		width: 100%
-		padding-bottom: 0
-		height: 100%
-.lorem
+// register
+.register
 	overflow: hidden
 	+clr
 	background-image: url("../img/bg-dark.png")
 	+cover
-	padding: 110px 0 105px 0
+	padding: 100px 0 104px 0
+	&-preview
+		position: absolute
+		display: inline-block
+		width: 740px
+		top: -40px
+		right: -220px
+		vertical-align: top
+		+r(1166)
+			width: 680px
+			top: 70px
+			right: -250px
+		+r(992)
+			top: 108px
+			position: relative
+			right: 0
+			left: 0
+			width: 100%
+			height: 815px
+		+r(768)
+			height: 605px
+		img
+			max-width: 100%
+			height: auto
 	.inner
 		+r(768)
 			padding: 0 30px
@@ -151,26 +237,26 @@
 			margin-left: 61px
 		h3
 			font-size: 60px
-			letter-spacing: 0.020rem
+			letter-spacing: 0.20rem
 			color: $white
-			line-height: 1
+			line-height: 1.11
 			+font-family($gotham-reg)
-			margin: 58px auto 41px
+			margin: 52px auto 17px
 			text-transform: uppercase
 		p.price
 			+font-family($gotham-reg)
 			font-size: 119.7px
 			color: $brown2
 			line-height: 1
-			letter-spacing: -0.050rem
+			letter-spacing: 0.05rem
 			strong
 				+font-family($gotham-md)
 				display: inline-block
 				font-size: 80px
 	&__about
-		margin-top: 85px
+		margin-top: 70px
 		.btn-group
-			margin-top: 70px
+			margin-top: 60px
 			.btn
 				+r(992)
 					max-width: 231px
@@ -179,6 +265,10 @@
 			font-size: 14px
 			line-height: 2.13
 			color: $gray
+			strong
+				+font-family($gotham-bld)
+				text-transform: uppercase
+				font-weight: bold
 		.title-icon
 			font-size: 14px
 			color: $gray
@@ -186,8 +276,7 @@
 			position: relative
 			padding-bottom: 29px
 			+font-family($gotham-light)
-			margin-left: 50px
-			margin-bottom: 30px
+			margin-bottom: 19px
 			&:after
 				content: ""
 				display: block

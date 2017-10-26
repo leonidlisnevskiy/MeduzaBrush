@@ -1,22 +1,30 @@
 .menu
 	font-size: 0
-	&__item
+	&__header
+		li:not(:first-child)
+			+md
+				display: block
+				margin-right: 0
+				margin-top: 43px
+		li:not(:last-child)
+			margin-right: 44px
+			+md
+				margin-right: 0
+	li
 		display: inline-block
-		vertical-align: middle
-		margin: 0 25px
-		+r(992)
-			margin: 0 15px
-	&__link
+		vertical-align: top
+	a
 		text-decoration: none
-		text-transform: uppercase
-		color: $white
-		font-size: 12px
-		position: relative
 		display: inline-block
 		vertical-align: middle
-		padding: 19px 0
-		line-height: 1
-		+font-family($proxima-bld)
+		position: relative
+		color: inherit
+		padding-bottom: 15px
+		+md
+			padding-bottom: 0
+		&:hover:after
+			opacity: 1
+			width: 100%
 		&:after
 			content: ""
 			display: block
@@ -31,15 +39,37 @@
 			transition: all .24s ease-in-out
 			background-color: rgba($coffee, .30)
 			-webkit-transition: all .24s ease-in-out
-		&.is-current:after
+	&__lang
+		margin-left: 94px
+		+md
+			margin-left: 0
+			margin-top: 43px
+		li
+			+md
+				display: inline-block
+			&:not(:last-child)
+				margin-right: 17px
+	&__lang,
+	&__header
+		+font-family($proxima-reg)
+		font-weight: normal
+		font-size: $text-xs
+		letter-spacing: 0.1em
+		display: inline-block
+		color: $white
+		vertical-align: top
+		text-transform: uppercase
+		+md
+			color: $link
+			font-size: 20px
+			text-align: center
 			display: block
-			background-color: $coffee
-			opacity: 1
-			width: 100%
-		&:hover:after
-			opacity: 1
-			width: 100%
-	&.header_menu
-		margin-left: -25px
-		+r(992)
-			margin-left: -15px
+		li.is-current
+			+font-family($proxima-bld)
+			a:after
+				display: block
+				background-color: $coffee
+				opacity: 1
+				width: 100%
+				+md
+					display: none

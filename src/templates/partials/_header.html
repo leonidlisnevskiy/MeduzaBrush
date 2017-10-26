@@ -1,45 +1,27 @@
-<header class="header">
-	<div class="inner">
-		<div class="inner__in">
-			<div class="header__panel">
-				<a href="page.html" class="logo header__logo">{{mixins.icon('logo-meduzabrush')}}</a>
+<header class="js-header header">
+	<div class="inner header__in">
+		<a href="page.html" class="logo">{{mixins.icon('logo')}}</a>
 
-				<ul class="js-lang list-lang menu">
-					<li class="menu__item"><a href="/" class="menu__link is-current">EN</a></li>
-					<li class="menu__item"><a href="/" class="menu__link">RU</a></li>
-				</ul>
-				<!-- END .list-lang -->
+		<nav class="js-header-nav header__nav">
+			<ul class="menu menu__header">
+				<li class="is-current"><a href="#home" class="js-scroll-to">главная</a></li>
+				<li ><a href="#features" class="js-scroll-to">особенности</a></li>
+				<li ><a href="#photos" class="js-scroll-to">фото</a></li>
+				<li ><a href="#order" class="js-scroll-to">заказать</a></li>
+				<li ><a href="#contacts" class="js-scroll-to">контакты</a></li>
+			</ul>
 
-				<nav class="header__nav">
-					<!-- <button class="js-btn-nav btn-nav" type="button"><span>btn</span></button> -->
-					<ul class="menu header_menu">
-						<li class="menu__item"><a href="#home" class="js-scroll-to menu__link is-current">главная</a></li>
-						<li class="menu__item"><a href="#features" class="js-scroll-to menu__link">особенности</a></li>
-						<li class="menu__item"><a href="#gallery" class="js-scroll-to menu__link">фото</a></li>
-						<li class="menu__item"><a href="#order" class="js-scroll-to menu__link">заказать</a></li>
-						<li class="menu__item"><a href="#contacts" class="js-scroll-to menu__link">контакты</a></li>
-					</ul>
-				</nav>
-				<!-- END .header__nav -->
-			</div>
-			<!-- END> header__panel -->
+			<ul class="menu menu__lang">
+				<li ><a href="/">EN</a></li>
+				<li class="is-current"><a href="/">RU</a></li>
+			</ul>
+		</nav>
+		<!-- END .nav -->
 
-			<div class="header__preview">
-				<div class="header__preview-desc">
-					<h3 class="title-shaped">MEDUSA BRUSH</h3>
-					<h2 class="title-lead">Тайна<br> послушных волос<br> распутана!</h2>
-
-					<div class="text">
-						<p>Давно ищешь идеальный инструмент для ухода за волосами? Он есть! Это — щетка <strong>Medusa Brush</strong>. Она прекрасно подходит для укладки или окрашивания, для сухих и мокрых волос – любого типа, объема и формы. Тебе больше не нужно держать целый арсенал щеток на все случаи жизни. <strong>Medusa Brush</strong> всегда будет под рукой. Она создана для девушки, которая любит, ценит и бережет свою красоту. Она создана для тебя!</p>
-						<a href="#order" class="js-scroll-to btn btn-brown btn-ghost">ЗАКАЗАТЬ</a>
-					</div>
-				</div>
-
-				<div class="head-pic" style="background-image: url('../img/brush-00.png')"></div>
-			</div>
-			<!-- END .header__preview -->
-		</div>
-
+		<button class="js-btn-nav btn-nav" type="button">
+			<span></span>
+		</button>
 	</div>
+	<!-- <div class="header-shape"></div> -->
 </header>
 <!-- END .header -->

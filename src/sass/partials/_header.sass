@@ -1,68 +1,44 @@
 .header
-	background-image: url("../img/bg-header.jpg")
-	overflow: hidden
-	background-repeat: no-repeat
-	&__panel
+	position: absolute
+	width: 100%
+	z-index: 10
+	top: 0
+	left: 0
+	&__in
 		font-size: 0
-		padding-top: 15px
 		+clr
-	&__logo
-		float: left
-		.icon-logo-meduzabrush
-			fill: $white
-	//nav
-	&__nav
+		position: relative
+		padding: 30px 25px 30px 200px
+		+md
+			padding: 30px 30px 30px 200px
+	&__panel
 		display: inline-block
 		vertical-align: top
-		float: right
-		position: relative
-		+clr
-		+r(768)
-			float: none
-			width: 100%
-	&__preview
-		display: inline-block
-		margin-top: 95px
 		width: 100%
-		position: relative
-		margin-bottom: 280px
-		vertical-align: top
-		+clr
-		&-desc
-			float: left
-			max-width: 600px
-			margin-left: 75px
-			+r(992)
-				margin-left: 0
-			h2.title-lead
-				margin: 75px auto
-				font-size: 48px
-				+font-family($gotham-reg)
-				color: $white
-				line-height: 1.25
-				font-weight: normal
-				font-style: normal
-				text-transform: uppercase
-				letter-spacing: 0.050rem
-				+r(992)
-					font-size: 43px
-					margin: 35px auto
-			.title-shaped
-				margin-left: 65px
-			.text
-				padding-left: 100px
-				+r(992)
-					padding-left: 55px
-				p
-					color: $gray
-					+font-family($gotham-light)
-					font-size: $text-sm //14px
-					line-height: 1.87
-					strong
-						text-transform: uppercase
-						+font-family($gotham-md)
-				.btn
-					margin-top: 86px
-					+r(768)
-						margin-top: 45px
-
+	.logo
+		position: absolute
+		top: 15px
+		left: 22px
+		z-index: 3
+	&-shape
+		display: block
+		position: absolute
+		bottom: -10px
+		transform: skewY(-11.5deg) translateY(50%)
+		right: 0
+		width: 100%
+		padding-bottom: 19.20%
+		background-color: $white
+	&__nav
+		transition: transform .61s ease-in-out
+		float: right
+		+md
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			padding: 100px 0 45px
+			overflow-y: auto
+			max-height: 100vh
+			background-color: $white
+			transform: translateY(-100%)

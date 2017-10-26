@@ -7,6 +7,28 @@ title: Index page
 
 {% include "partials/_header.html" %}
 
+<div class="preview" style="background-image: url('../img/bg-header.jpg');">
+	<div class="preview__in inner">
+		<div class="copyright">medusa brush. simmetria © 2017</div>
+		<div class="preview__desc">
+			<h3 class="title-shaped">MEDUSA BRUSH</h3>
+			<h2 class="title-lead">Тайна<br> послушных волос<br> распутана!</h2>
+
+			<div class="preview__text">
+				<p>Давно ищешь идеальный инструмент для ухода за волосами? <br>Он есть! Это — щетка <strong>Medusa Brush</strong>. Она прекрасно подходит для укладки или окрашивания, для сухих и мокрых волос – любого типа, объема и формы. Тебе больше не нужно держать целый арсенал щеток на все случаи жизни. <strong>Medusa Brush</strong> всегда будет под рукой. Она создана для девушки, которая любит, ценит и бережет свою красоту. Она создана для тебя!</p>
+				<a href="#order" class="js-scroll-to btn btn-brown btn-ghost">ЗАКАЗАТЬ</a>
+			</div>
+		</div>
+
+		<div class="preview__image-wrapper">
+			<div class="preview__image">
+				<img src="img/brush-00.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END .preview -->
+
 <div class="features" id="features">
 	<div class="inner">
 		<div class="inner__in">
@@ -33,10 +55,8 @@ title: Index page
 					</li>
 				</ul>
 
-				<ul class="list-features">
-					<li>
-						<h2 class="title-shaped">особенности</h2>
-					</li>
+				<h2 class="title-shaped">особенности</h2>
+				<ul class="list-features offset-top">
 					<li>
 						<i class="icon-feat-01"></i>
 						<h3>Особый материал</h3>
@@ -49,13 +69,11 @@ title: Index page
 					</li>
 				</ul>
 			</div>
-			<!-- END .features__right -->
 		</div>
 	</div>
 </div>
-<!-- END .features -->
 
-<div class="gallery" id="gallery">
+<div class="gallery" id="photos">
 	<div class="js-slider slider js-reveal-container">
 		<div class="item-slider item-lg">
 			<div class="js-reveal js-reveal-00">
@@ -91,14 +109,14 @@ title: Index page
 </div>
 <!-- END .gallery -->
 
-<div class="lorem">
+<div class="register">
 	<div class="inner">
 		<div class="inner__in">
-			<div class="lorem__desc">
+			<div class="register__desc">
 				<h2 class="title-shaped">Заказать</h2>
 				<h3>Цена <br>Medusa Brush</h3>
 				<p class="price">669 <strong>UAH</strong></p>
-				<div class="lorem__about">
+				<div class="register__about">
 					<div class="title-icon"><i class="icon-novaposhta"></i>Доставка Новой Почтой по Украине</div>
 					<p><strong>Medusa Brush</strong> — эксклюзивный и инновационный продукт. Заказывай оригинальную щетку на этом сайте, а также в сети магазинов <strong>SIMMETRIA</strong>. И всегда будь неотразимой, ведь каждый день — твой самый важный день в жизни!</p>
 					<div class="btn-group">
@@ -107,9 +125,9 @@ title: Index page
 					</div>
 				</div>
 			</div>
-			<!-- END .lorem__desc -->
-			<div class="loremin">
-				<div class="lorem2" style="background-image: url('../img/brush-double.png');"></div>
+			<!-- END .register__desc -->
+			<div class="register-preview">
+				<img src="img/brush-double.png" alt="">
 			</div>
 		</div>
 	</div>
@@ -138,7 +156,7 @@ title: Index page
 			</div>
 
 			<div class="textarea-field">
-				<textarea class="textarea" cols="12" rows="5" placeholder="Комментарий"></textarea>
+				<textarea class="textarea" cols="12" rows="8" placeholder="Комментарий"></textarea>
 			</div>
 			<button type="submit" class="btn btn-ghost  btn-dark">заказать</button>
 		</form>
@@ -147,6 +165,13 @@ title: Index page
 </div>
 <!-- END .order -->
 {% include "partials/_footer.html" %}
+
+
+<!-- <div class="scroll-down-container">
+	<a href="#contacts" class="scroll-down js-scroll-to">Прокрутить вниз <i class="icon-arrow-down" title="Вниз"></i></a>
+</div> -->
+
+
 {% endblock %}
 
 
