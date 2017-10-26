@@ -4,11 +4,40 @@
 	padding-top: 155px
 	padding-bottom: 302px
 	color: $white
+	overflow: hidden
 	+cover
 	+clr
 	+md
 		overflow: hidden
 		padding-bottom: 0
+	&:before
+		position: absolute
+		content: ""
+		bottom: 0
+		left: 3vw
+		margin-left: calc(50% - 15vw)
+		margin-bottom: 19.5vw
+		z-index: 1
+		width: 97vw
+		height: 160px
+		transform-origin: right bottom
+		transform: skew(0deg, -11.5deg)
+		pointer-events: none
+		background: $white
+		display: none
+		+md
+			display: block
+	&:after
+		position: absolute
+		content: ""
+		bottom: 0
+		left: 0
+		right: 0
+		height: 160px
+		background: $white
+		display: none
+		+md
+			display: block
 	&__in
 		max-width: 1170px
 		+clr
@@ -144,20 +173,22 @@
 .features
 	background-image: url("../img/bg-features.png")
 	+cover
+	display: inline-block
+	width: 100%
 	position: relative
-	+r(992)
+	+md
 		background-position: left center
 	.image-left
+		position: absolute
+		left: 25px
+		bottom: 0
+		margin-left: -108px
+		width: 550px
+		height: 897px
 		overflow: hidden
-		height: 880px
-		margin-left: 40px
-		+r(1024)
-			margin-left: 20px
-		+r(992)
-			display: none
 		img
 			max-width: 100%
-			height: auto
+			display: block
 	&__right
 		float: right
 		font-size: 0
@@ -165,12 +196,8 @@
 		max-width: 670px
 		position: relative
 		top: -77px
-		+r(992)
-			max-width: 100%
-			width: 100%
-			display: inline-block
-			vertical-align: top
-			float: none
+		+md
+			top: 0
 		.list-features
 			width: 50%
 			max-width: 340px
@@ -291,3 +318,94 @@
 				position: absolute
 				top: -12px
 				left: -50px
+
+
+// gallery
+.gallery
+	display: inline-block
+	vertical-align: top
+	+clr
+	width: 100%
+.js-reveal
+	opacity: 1
+	+r(680)
+		transform: translate3d(0, 0, 0) !important
+	&.active
+		opacity: 0
+		background-color: red
+
+.item
+	&-slider
+		overflow: hidden
+		display: inline-block
+		vertical-align: top
+		&:hover a
+			transform: scale(1.1)
+			+r(768)
+				transform: scale(1)
+		a
+			+cover
+			text-decoration: none
+			transition: transform .42s ease-in-out
+			cursor: pointer
+			display: block
+		// item sizes
+		&.item
+			&-lg
+				width: 65.5%
+				+r(640)
+					height: 630px
+				+r(570)
+					height: auto
+				a
+					padding-bottom: 50.56%
+					+r(640)
+						padding-bottom: 100%
+			&-md
+				width: 34.50%
+				+r(640)
+					height: 630px
+				+r(570)
+					height: auto
+				a
+					padding-bottom: 94.58%
+					+r(640)
+						padding-bottom: 100%
+			&-sm
+				width: 33.3333%
+				+r(640)
+					height: 630px
+				+r(570)
+					height: auto
+				a
+					padding-bottom: 73.40%
+	&-slider img
+		max-width: 100%
+		height: auto
+
+.slick
+	&-dots
+		text-align: center
+		position: absolute
+		bottom: 40px
+		left: 50%
+		transform: translateX(-50%)
+		+r(570)
+			bottom: 20px
+		li
+			display: inline-block
+			vertical-align: middle
+			line-height: 15px
+			padding: 0 10px
+			button
+				background-color: $coffee
+				font-size: 0
+				width: 9px
+				vertical-align: middle
+				height: 9px
+				transition: all .24s ease-in-out
+				border-radius: 50px
+			&.slick-active
+				button
+					background-color: rgba($coffee, .50)
+					transform: scale(1.70)
