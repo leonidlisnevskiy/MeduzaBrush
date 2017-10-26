@@ -20,11 +20,9 @@ $('.js-btn-nav').click(function(event) {
   event.stopPropagation();
   $('.js-header').toggleClass('is-open');
 
-  $(document).on('click', function(e) {
-    if(!$('.js-header').is(e.target) && $('.js-header').has(e.target).length === 0) {
-      $('.js-header').removeClass('is-open');
-    }
-  });
+  if(!$('.js-header').is(e.target) && $('.js-header').has(e.target).length === 0) {
+    $('.js-header').removeClass('is-open');
+  }
 });
 
 
