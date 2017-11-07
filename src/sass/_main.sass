@@ -66,7 +66,7 @@
 		max-width: 670px
 		z-index: 3
 		position: relative
-		padding-left: 78px
+		padding-left: 70px
 		+md
 			padding-left: 0
 			float: none
@@ -178,22 +178,25 @@
 	position: relative
 	+md
 		background-position: left center
+	&__in
+		position: relative
 	.image-left
 		position: absolute
 		left: 25px
-		bottom: 0
 		margin-left: -108px
+		bottom: 0
 		width: 550px
 		height: 897px
 		overflow: hidden
 		img
-			max-width: 100%
 			display: block
+			margin: 0 auto
+			max-width: 100%
 	&__right
 		float: right
 		font-size: 0
-		display: table
 		max-width: 670px
+		width: 61%
 		position: relative
 		top: -77px
 		+md
@@ -211,9 +214,6 @@
 			top: 0
 			right: 40px
 			position: absolute
-.image
-	&-left
-		float: left
 
 
 // register

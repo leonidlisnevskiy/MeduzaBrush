@@ -4,6 +4,7 @@
 	z-index: 10
 	top: 0
 	left: 0
+	transition: background-color .32s linear
 	&__in
 		font-size: 0
 		+clr
@@ -29,6 +30,8 @@
 		width: 100%
 		padding-bottom: 19.20%
 		background-color: $white
+		+md
+			display: none
 	&__nav
 		transition: transform .61s ease-in-out
 		float: right
